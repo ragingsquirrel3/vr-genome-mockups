@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Hello, World! - A-Frame</title>
+    <meta name="description" content="Hello, World! - A-Frame">
+    <script src="https://aframe.io/releases/0.3.2/aframe.min.js"></script>
+  </head>
+  <body>
+    <a-scene>
+      <a-assets>
+          <img id='epi' src='https://s3.amazonaws.com/vrdb/epiviz.png' crossorigin='anonymous'>
+          <img id='track1' src='https://s3.amazonaws.com/vrdb/track1.png' crossorigin='anonymous'>
+          <img id='track2' src='https://s3.amazonaws.com/vrdb/track2.png' crossorigin='anonymous'>
+          <img id='track3' src='https://s3.amazonaws.com/vrdb/track3.png' crossorigin='anonymous'>
+          <img id='track4' src='https://s3.amazonaws.com/vrdb/track4.png' crossorigin='anonymous'>
+          https://s3.amazonaws.com/vrdb/track1.png
+      </a-assets>
+      
+      <a-cylinder
+        position="0 1.75 -5" radius="0.25"
+        height="5.5" color="#4390bc"
+        rotation='0 15 90'
+      >
+        <a-image src="#epi"
+          position="0.6 0 0"
+          width='5'
+          rotation='0 0 -90'
+        >
+        </a-image>
+      </a-cylinder>
+      <a-cylinder
+        position="0 -1 -5" radius="0.25"
+        height="5.5" color="#4390bc"
+        rotation='0 15 90'
+      >
+        <a-image src="#track2"
+          position="0.6 0 0"
+          width='5'
+          rotation='0 0 -90'
+        >
+        </a-image>
+        <a-image src="#track1"
+          position="0.6 0 0.25"
+          width='5'
+          rotation='0 -25 -90'
+        >
+        </a-image>
+        <a-image src="#track3"
+          position="0.40 0 0.50"
+          width='5'
+          rotation='0 -50 -90'
+        >
+        </a-image>
+      </a-cylinder>
+      <a-cylinder
+        position="0 -2 -5" radius="0.25"
+        height="5.5" color="#4390bc"
+        rotation='0 15 90'
+      >
+        <a-cylinder
+          radius="0.35" position="1 0 0"
+          height="0.5" color="#e8a87c"
+        >
+      </a-cylinder>
+      <a-sky color="#000000"></a-sky>
+    </a-scene>
+  </body>
+</html>
